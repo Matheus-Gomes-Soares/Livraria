@@ -1,7 +1,15 @@
 package model;
 
-public class Funcionario extends Usuario {
+import java.util.List;
+
+public class Funcionario extends Usuario implements Comunicacao {
     String codigoFunc;
+    List<String> msgs;
+    
+    @Override
+    public void setMsg(String msg) {
+        msgs.add(msg);
+    }
 
 
 }
